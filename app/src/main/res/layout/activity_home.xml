@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Lname"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FEFEFE"
+    tools:context=".HomeActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="175dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/background_habits"
+        android:gravity="center"
+        android:text="Habits"
+        android:textColor="#ffffff"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewUser"
+        android:layout_width="142dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="84dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="191dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="Saturday, 01"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="90sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.17">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="85sp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_dateweek"
+                android:gravity="center"
+                android:text=" Sat \n 01 "
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center"
+                android:text=" Sun \n 02 "
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center"
+                android:text=" Mon \n 03 "
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center"
+                android:text=" Tue \n 04 "
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center"
+                android:text=" Wed \n 05 "
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center"
+                android:text=" Thu \n 06 "
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center"
+                android:text=" Fri \n 07 "
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center"
+                android:text=" Sat \n 08 "
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center"
+                android:text=" Sun \n 09 "
+                android:textColor="#000000" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="530dp"
+        android:layout_marginTop="100dp"
+        android:columnCount="2"
+        android:rowCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.567">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cycling"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="10dp"
+            android:background="#FEFEFE"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bike" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cycling"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/eating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="10dp"
+            android:background="#FEFEFE"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/food" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Eating"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sleeping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="10dp"
+            android:background="#FEFEFE"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/sleep" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sleeping"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/reading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="10dp"
+            android:background="#FEFEFE"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/read" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reading"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:background="@drawable/under_home"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_gravity="center"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="300dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.281"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:layout_gravity="center"
+        android:layout_marginStart="180dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/profile"
+        android:layout_width="40dp"
+        android:layout_height="42dp"
+        android:layout_row="0"
+        android:layout_column="2"
+        android:layout_gravity="center"
+        android:layout_marginStart="320dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

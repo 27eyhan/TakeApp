@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Lname"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:background="@drawable/under_home"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/Profile"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="131dp"
+        android:layout_marginBottom="485dp"
+        android:background="#BDBDBD"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/circleImageVIew" />
+
+    <ImageView
+        android:id="@+id/home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_gravity="center"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="300dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.281"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:layout_gravity="center"
+        android:layout_marginStart="180dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/profile"
+        android:layout_width="40dp"
+        android:layout_height="42dp"
+        android:layout_row="0"
+        android:layout_column="2"
+        android:layout_gravity="center"
+        android:layout_marginStart="320dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="177dp"
+        android:layout_height="72dp"
+        android:layout_marginEnd="234dp"
+        android:layout_marginBottom="659dp"
+        android:background="@drawable/background_habits"
+        android:gravity="center"
+        android:text="Profile"
+        android:textAlignment="center"
+        android:textColor="#FFFF"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="256dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="448dp"
+        android:text="username"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/userInfo"
+        android:layout_width="198dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="106dp"
+        android:layout_marginTop="308dp"
+        android:layout_marginEnd="107dp"
+        android:layout_marginBottom="355dp"
+        android:backgroundTint="#068151"
+        android:text="Account Information"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/history"
+        android:layout_width="198dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="106dp"
+        android:layout_marginTop="388dp"
+        android:layout_marginEnd="107dp"
+        android:layout_marginBottom="275dp"
+        android:backgroundTint="#068151"
+        android:text="History"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="198dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="106dp"
+        android:layout_marginTop="469dp"
+        android:layout_marginEnd="107dp"
+        android:layout_marginBottom="194dp"
+        android:backgroundTint="#068151"
+        android:text="Log Out"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
