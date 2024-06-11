@@ -37,24 +37,22 @@
     <TextView
         android:layout_width="191dp"
         android:layout_height="37dp"
-        android:layout_marginStart="220dp"
         android:layout_marginTop="32dp"
         android:gravity="center"
         android:text="Saturday, 01"
         android:textSize="23dp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toTopOf="parent" />
 
     <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
         android:layout_width="match_parent"
         android:layout_height="90sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@id/textViewUser"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.17">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -171,10 +169,11 @@
         android:layout_marginTop="100dp"
         android:columnCount="1"
         android:rowCount="6"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/view2"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.567">
+        app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
+        app:layout_constraintVertical_bias="2.0">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cycling"
@@ -315,6 +314,7 @@
                     android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
             android:id="@+id/watching"
             android:layout_width="wrap_content"
@@ -353,12 +353,13 @@
 
     <View
         android:id="@+id/view2"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="90dp"
         android:background="@drawable/under_home"
         android:foregroundGravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
         android:id="@+id/home"

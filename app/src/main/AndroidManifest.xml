@@ -35,6 +35,15 @@
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
+            android:name=".AccInfoActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".ChangePassword"
+            android:exported="false"/>
+        <activity
+            android:name=".ForgetPasswordActivity"
+            android:exported="false"/>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

@@ -15,8 +15,8 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        Button accinfo = findViewById(R.id.userInfo);
-        accinfo.setOnClickListener(new View.OnClickListener() {
+        Button accInfo = findViewById(R.id.userInfo);
+        accInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ProfileActivity.this, AccInfoActivity.class);

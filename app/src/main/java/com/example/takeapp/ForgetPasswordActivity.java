@@ -1,9 +1,11 @@
 package com.example.takeapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -36,6 +38,15 @@ public class ForgetPasswordActivity extends AppCompatActivity {
         codeReqMsg.setVisibility(View.INVISIBLE);
         resendcode.setVisibility(View.INVISIBLE);
         confirm.setVisibility(View.INVISIBLE);
+
+        ImageView Back = findViewById(R.id.back);
+        Back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ForgetPasswordActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }

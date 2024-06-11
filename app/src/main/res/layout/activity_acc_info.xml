@@ -8,11 +8,11 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="226dp"
-        android:layout_height="79dp"
+        android:layout_width="234dp"
+        android:layout_height="80dp"
         android:background="@drawable/background_habits"
         android:gravity="center"
-        android:text="Account information"
+        android:text="Account Information"
         android:textColor="#ffffff"
         android:textSize="19sp"
         android:textStyle="bold"
@@ -35,8 +35,8 @@
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/Profile"
-        android:layout_width="150sp"
-        android:layout_height="150sp"
+        android:layout_width="120sp"
+        android:layout_height="120sp"
         android:layout_marginStart="130dp"
         android:layout_marginTop="155dp"
         android:layout_marginEnd="131dp"
@@ -58,25 +58,23 @@
         android:layout_marginTop="373dp"
         android:layout_marginEnd="288dp"
         android:layout_marginBottom="331dp"
-        android:background="@drawable/edit_text_background"
         android:text="First Name: "
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView27"
+        android:id="@+id/lname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="409dp"
         android:layout_marginEnd="288dp"
         android:layout_marginBottom="295dp"
-        android:background="@drawable/edit_text_background"
         android:text="Last Name: "
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,9 +88,8 @@
         android:layout_marginTop="445dp"
         android:layout_marginEnd="262dp"
         android:layout_marginBottom="259dp"
-        android:background="@drawable/edit_text_background"
         android:text="Email Address:"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -106,13 +103,14 @@
         android:layout_marginTop="483dp"
         android:layout_marginEnd="189dp"
         android:layout_marginBottom="221dp"
-        android:background="@drawable/edit_text_background"
         android:text="Account Date Created: "
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.227"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.49" />
 
     <Button
         android:id="@+id/button"
@@ -139,9 +137,8 @@
         android:layout_marginTop="336dp"
         android:layout_marginEnd="296dp"
         android:layout_marginBottom="368dp"
-        android:background="@drawable/edit_text_background"
         android:text="MyHabitID:"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -159,8 +156,7 @@
         android:hint="Enter Your First Name"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fname"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
@@ -169,19 +165,17 @@
         android:layout_height="29dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="409dp"
-        android:layout_marginEnd="135dp"
         android:layout_marginBottom="293dp"
         android:background="@drawable/edit_text_background"
         android:hint="Enter Your Last Name"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lname"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/EmailEditText"
-        android:layout_width="260dp"
+        android:layout_width="235dp"
         android:layout_height="29dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="443dp"
@@ -191,8 +185,7 @@
         android:hint="Enter Email Last Name"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/email"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,6 +27,7 @@ public class LoginActivity extends AppCompatActivity {
         EditText passwordEditText = findViewById(R.id.PasswordText);
         Button enterButton = findViewById(R.id.EnterButton);
         Button createAccountButton = findViewById(R.id.CreateButton);
+        TextView forgotPass = findViewById(R.id.ResetPassword);
 
         enterButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +54,13 @@ public class LoginActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(LoginActivity.this, "User not found", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+        forgotPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, ForgetPasswordActivity.class);
+                startActivity(intent);
             }
         });
 
