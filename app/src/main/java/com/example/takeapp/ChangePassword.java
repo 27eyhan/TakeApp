@@ -24,7 +24,7 @@ public class ChangePassword extends AppCompatActivity {
 
         EditText newPass = findViewById(R.id.newPass);
         EditText confirmNewPass = findViewById(R.id.ConfirmnewPass);
-        Button changePassButton = findViewById(R.id.changePass);
+        Button changePassButton = findViewById(R.id.changePassBtn);
 
         changePassButton.setOnClickListener(new View.OnClickListener() {
             @Override
