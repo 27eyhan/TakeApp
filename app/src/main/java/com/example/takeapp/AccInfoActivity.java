@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class AccInfoActivity extends AppCompatActivity {
 
-    private TextView fnameTextView, lnameTextView, emailTextView;
+    private TextView fnameTextView, lnameTextView, emailTextView, userIDTextView, AccDateCreatedTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,17 @@ public class AccInfoActivity extends AppCompatActivity {
         fnameTextView = findViewById(R.id.fnameEditText);
         lnameTextView = findViewById(R.id.lnameEditText);
         emailTextView = findViewById(R.id.EmailEditText);
+        userIDTextView = findViewById(R.id.habitID);
+        AccDateCreatedTextView = findViewById(R.id.AccDateText);
+
+        ImageView back = findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AccInfoActivity.this, ProfileActivity.class);
+                startActivity(intent);
+            }
+        });
 
         // Assuming you have the user's email stored in a variable, get it from intent extras
         String userEmail = getIntent().getStringExtra("user_email");
@@ -34,6 +45,8 @@ public class AccInfoActivity extends AppCompatActivity {
             fnameTextView.setText(user.getFirstName());
             lnameTextView.setText(user.getLastName());
             emailTextView.setText(user.getEmail());
+            userID.setText(user.getUserID());
+            AccDateCreatedTextView.setText(user.CreationDate));
         }*/
     }
 }
