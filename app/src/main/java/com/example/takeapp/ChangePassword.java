@@ -49,10 +49,14 @@ public class ChangePassword extends AppCompatActivity {
                 }else if(!confirmNewPassword.equals(NewPassword)){
                     Toast.makeText(ChangePassword.this,"Your Password do not match!", Toast.LENGTH_SHORT).show();
                 }else{
-                    dbHelper.updatePassword(email, NewPassword);
-                    Toast.makeText(ChangePassword.this,"Successfully Change Your Password", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(ChangePassword.this, LoginActivity.class);
-                    startActivity(intent);
+                    boolean isUpdate = dbHelper.updatePassword(email, NewPassword);
+                    if(isUpdate) {
+                        Toast.makeText(ChangePassword.this, "Successfully Change Your Password", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(ChangePassword.this, LoginActivity.class);
+                        startActivity(intent);
+                    }else{
+                        Toast.makeText(ChangePassword.this, "Failed to Change Password", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });
