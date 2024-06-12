@@ -98,4 +98,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String[] selectionArgs = {email};
         return db.query(TABLE_USERS, columns, selection, selectionArgs, null, null, null);
     }
+    
+    public boolean updatePassword(String email, String newPassword) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("PasswordHash", newPassword);
+
+        String selection = "Email=?";
+        String[] selectionArgs = {email};
+
+        int result = db.update("User", values, selection, selectionArgs);
+        db.close();
+        return result > 0;
+    }
 }
