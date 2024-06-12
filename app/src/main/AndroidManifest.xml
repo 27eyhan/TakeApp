@@ -44,6 +44,9 @@
             android:name=".ForgetPasswordActivity"
             android:exported="false"/>
         <activity
+            android:name=".Schedule"
+            android:exported="false"/>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
