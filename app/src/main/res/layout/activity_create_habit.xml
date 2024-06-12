@@ -69,7 +69,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/bike"
-                    android:contentDescription="Bike"/>
+                    android:contentDescription="Bike"
+                    android:background="@android:color/transparent"/>
 
                 <TextView
                     android:id="@+id/cyclingtextview"
@@ -107,7 +108,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/food"
-                    android:contentDescription="Eating"/>
+                    android:contentDescription="Eating"
+                    android:background="@android:color/transparent"/>
 
                 <TextView
                     android:id="@+id/eatingtextview"
@@ -145,7 +147,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/sleep"
-                    android:contentDescription="Sleep"/>
+                    android:contentDescription="Sleep"
+                    android:background="@android:color/transparent"/>
 
                 <TextView
                     android:id="@+id/sleepingtextview"
@@ -183,7 +186,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/read"
-                    android:contentDescription="Read Books"/>
+                    android:contentDescription="Read Books"
+                    android:background="@android:color/transparent"/>
 
                 <TextView
                     android:id="@+id/readingtextview"
@@ -221,7 +225,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/watch"
-                    android:contentDescription="Watch Video"/>
+                    android:contentDescription="Watch Video"
+                    android:background="@android:color/transparent"/>
 
                 <TextView
                     android:id="@+id/watchingtextview"
@@ -259,7 +264,8 @@
                     android:layout_width="66dp"
                     android:layout_height="65dp"
                     app:srcCompat="@drawable/gaming"
-                    android:contentDescription="Gaming"/>
+                    android:contentDescription="Gaming"
+                    android:background="@android:color/transparent"/>
 
                 <TextView
                     android:id="@+id/gamingtextview"

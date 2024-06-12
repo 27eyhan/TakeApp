@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 public class CreateHabit extends AppCompatActivity {
     private ImageButton bike, game, read, sleep, watch, food;
