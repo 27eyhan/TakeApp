@@ -10,6 +10,11 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
     private TextView[] textViewArray;
@@ -18,6 +23,10 @@ public class HomeActivity extends AppCompatActivity {
     private HorizontalScrollView scrollV, scrollV2;
     private SharedPreferences preferences; // Declare SharedPreferences object here
     private SharedPreferences.Editor editor;
+
+    private RecyclerView recyclerView;
+    private AdapterHabit adapterHabit;
+    private List<HabitHolderRecycle> habitList;
 
 
     @Override
@@ -102,6 +111,20 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        habitList = new ArrayList<>();
+        habitList.add(new HabitHolderRecycle("Cycling", R.drawable.bike));
+        habitList.add(new HabitHolderRecycle("Eating", R.drawable.food));
+        habitList.add(new HabitHolderRecycle("Sleeping", R.drawable.sleep));
+        habitList.add(new HabitHolderRecycle("Reading", R.drawable.read));
+        habitList.add(new HabitHolderRecycle("Watching", R.drawable.watch));
+        habitList.add(new HabitHolderRecycle("Gaming", R.drawable.gaming));
+
+        adapterHabit = new AdapterHabit(this, habitList);
+        recyclerView.setAdapter(adapterHabit);
         ImageView homeView = findViewById(R.id.home);
         homeView.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -121,14 +144,12 @@ public class HomeActivity extends AppCompatActivity {
         scrollV.setOnScrollChangeListener(new View.OnScrollChangeListener() {
             @Override
             public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
-                // Synchronize scrolling of scrollV with scrollV2
                 scrollV2.scrollTo(scrollX, scrollY);
             }
         });
         scrollV2.setOnScrollChangeListener(new View.OnScrollChangeListener() {
             @Override
             public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
-                // Synchronize scrolling of scrollV with scrollV2
                 scrollV.scrollTo(scrollX, scrollY);
             }
         });
