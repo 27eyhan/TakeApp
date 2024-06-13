@@ -1,5 +1,6 @@
 package com.example.takeapp;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -67,7 +68,7 @@ public class ForgetPasswordActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String email = emailInput.getText().toString().trim();
                 Cursor cursor = dbHelper.getUser(email);
-                generateAndNotifCOde();
+
                 /*if (cursor != null && cursor.moveToFirst()) {
                     codeMsg.setVisibility(View.VISIBLE);
                     codeInput.setVisibility(View.VISIBLE);
@@ -82,12 +83,13 @@ public class ForgetPasswordActivity extends AppCompatActivity {
                         }
                     });
                 }*/
-                if (email.equals("android1@gmail.com")) {
+                if(email.equals("android1@gmail.com")) {
                     codeMsg.setVisibility(View.VISIBLE);
                     codeInput.setVisibility(View.VISIBLE);
                     codeReqMsg.setVisibility(View.VISIBLE);
                     resendcode.setVisibility(View.VISIBLE);
                     confirm.setVisibility(View.VISIBLE);
+                    generateAndNotifCOde();
                     resendcode.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
@@ -138,7 +140,11 @@ public class ForgetPasswordActivity extends AppCompatActivity {
         notifCode(codeGen);
     }
     private void notifCode(String code){
-        Toast.makeText(this, "Code: " + code, Toast.LENGTH_LONG).show();
+        new AlertDialog.Builder(this)
+                .setTitle("Verification Code")
+                .setMessage("Your Code is: " + code)
+                .setPositiveButton(android.R.string.ok, null)
+                .show();
     }
     private String CodeGenerator(){
         Random rand = new Random();
