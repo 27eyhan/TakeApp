@@ -25,25 +25,22 @@ public class ChangePassword extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_change_password);
-
         EditText newPass = findViewById(R.id.newPass);
         EditText confirmNewPass = findViewById(R.id.ConfirmnewPass);
         Button changePassButton = findViewById(R.id.changePassBtn);
 
         dbHelper = new DatabaseHelper(this);
 
+        TextView viewEmail = findViewById(R.id.showUserEmail);
+        Intent intent = getIntent();
+        String email = intent.getStringExtra("EMAIL");
+        viewEmail.setText(email);
 
         changePassButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 String NewPassword = newPass.getText().toString().trim();
                 String confirmNewPassword = confirmNewPass.getText().toString().trim();
-                String email = getIntent().getStringExtra("email");
-
-                TextView viewEmail = findViewById(R.id.showUserEmail);
-                viewEmail.setText(email);
-
                 if(NewPassword.isEmpty() || confirmNewPassword.isEmpty()) {
                     Toast.makeText(ChangePassword.this, "Please Enter Your New Password", Toast.LENGTH_SHORT).show();
                 }else if(!confirmNewPassword.equals(NewPassword)){
@@ -52,8 +49,8 @@ public class ChangePassword extends AppCompatActivity {
                     boolean isUpdate = dbHelper.updatePassword(email, NewPassword);
                     if(isUpdate) {
                         Toast.makeText(ChangePassword.this, "Successfully Change Your Password", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(ChangePassword.this, LoginActivity.class);
-                        startActivity(intent);
+                        Intent back = new Intent(ChangePassword.this, LoginActivity.class);
+                        startActivity(back);
                     }else{
                         Toast.makeText(ChangePassword.this, "Failed to Change Password", Toast.LENGTH_SHORT).show();
                     }
